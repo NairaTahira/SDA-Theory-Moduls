@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "Modul.h"
 
-int main() {
+int main () {
     address head = NULL;
     int nilai, posisi, pilihan;
     do {

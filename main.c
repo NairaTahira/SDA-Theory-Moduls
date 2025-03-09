@@ -1,99 +1,46 @@
-<<<<<<< HEAD
 #include <stdio.h>
+#include <stdlib.h>
 #include "modul.h"
 
 int main() {
     address list = NULL;
+    
+    // Menambahkan node ke dalam linked list
     Add_Awal(&list, 10);
     Add_Akhir(&list, 20);
     Add_Tengah(&list, 15, 1);
+    
+    // Menampilkan linked list
+    printf("Linked List saat ini: \n");
     Tampil_List(list);
+    
+    // Mencari node tertentu
     cari_Node(list, 15);
     cari_Node(list, 25);
+    
+    // Menghapus node dari linked list
+    printf("Menghapus node di awal:\n");
+    hapus_Nodeawal(&list);
+    Tampil_List(list);
+    
+    printf("Menghapus node di akhir:\n");
+    hapus_NodeAkhir(&list);
+    Tampil_List(list);
+    
+    printf("Menghapus node di posisi ke-1:\n");
+    hapus_Node(&list, 1);
+    Tampil_List(list);
+    
+    printf("Jumlah total node: %d\n", jumtot_Node(list));
+    
+    printf("Nilai maksimum dalam linked list: %d\n", node_Max(list));
+    
+    printf("Rata-rata nilai dalam linked list: %.2f\n", rata2_Node(list));
+    
+    printf("Menukar node dalam linked list:\n");
+    tukar_Node(&list);
+    Tampil_List(list);
+    
     return 0;
 }
-=======
-#include <stdio.h>
-#include <stdlib.h>
-#include "Modul.h"
 
-int main() {
-    address head = NULL;
-    int nilai, posisi, pilihan;
-    do {
-        printf("1. Tambah Node di awal\n");
-        printf("2. Tambah Node di akhir\n");
-        printf("3. Tambah Node di tengah\n");
-        printf("4. Cari Node\n");
-        printf("5. Hapus Node di awal\n");
-        printf("6. Hapus Node di akhir\n");
-        printf("7. Hapus Node di tengah\n");
-        printf("8. Jumlah total Node\n");
-        printf("9. Nilai maksimal Node\n");
-        printf("10. Rata-rata Node\n");
-        printf("11. Tukar Node\n");
-        printf("12. Tampilkan Node\n");
-        printf("13. Keluar\n");
-        printf("Pilihan: ");
-        scanf("%d", &pilihan);
-        switch (pilihan) {
-            case 1:
-                printf("Masukkan nilai: ");
-                scanf("%d", &nilai);
-                Add_Awal(&head, nilai);
-                break;
-            case 2:
-                printf("Masukkan nilai: ");
-                scanf("%d", &nilai);
-                Add_Akhir(&head, nilai);
-                break;
-            case 3:
-                printf("Masukkan nilai: ");
-                scanf("%d", &nilai);
-                printf("Masukkan posisi: ");
-                scanf("%d", &posisi);
-                Add_Tengah(&head, nilai, posisi);
-                break;
-            case 4:
-                printf("Masukkan nilai yang dicari: ");
-                scanf("%d", &nilai);
-                cari_Node(head, nilai);
-                break;
-            case 5:
-                hapus_Nodeawal(&head);
-                break;
-            case 6:
-                hapus_NodeAkhir(&head);
-                break;
-            case 7:
-                printf("Masukkan posisi: ");
-                scanf("%d", &posisi);
-                hapus_Node(&head, posisi);
-                break;
-            case 8:
-                printf("Jumlah total Node: %d\n", jumtot_Node(head));
-                break;
-            case 9:
-                printf("Nilai maksimal Node: %d\n", node_Max(head));
-                break;
-            case 10:
-                printf("Rata-rata Node: %.2f\n", rata2_Node(head));
-                break;
-            case 11:
-                tukar_Node(&head);
-                break;
-            case 12:
-                Tampil_List(head);
-                break;
-            case 13:
-                printf("Keluar\n");
-                break;
-            default:
-                printf("Pilihan tidak valid\n");
-                break;
-        }
-    } while (pilihan != 13);
-
-    return 0;
-}
->>>>>>> 42a6f153162bf492f57d1df22cd5ed0276acbf4c

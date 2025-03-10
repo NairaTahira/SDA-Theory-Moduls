@@ -15,9 +15,8 @@ int main() {
 	
 	printf("Initiating Program: \n\n");
 	
-    
+    printf("Bagian: Nashwa Fathia (24151123): \n");
 //    Create_Node(&p);
-
     Add_Awal(&p, 45);
     Add_Awal(&p, 12);
     Add_Awal(&p, 88);
@@ -40,7 +39,9 @@ int main() {
     hapus_NodeAkhir(&p);
     printf("\nMenghapus node akhir:\n");
     Tampil_List(p);
-
+	
+	
+	printf("\n\nBagian: Naira Tahira (241511022):");
     // Deleting from a different position
     hapus_Node(&p, 3);
     printf("\nMenghapus node ke-3:\n");
